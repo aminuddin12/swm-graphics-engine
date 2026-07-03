@@ -5,7 +5,7 @@ namespace swm::graphics {
 
 class Resource {
 public:
-    virtual ~Resource() = default;
+    virtual ~Resource() noexcept = default;
     virtual const std::string& getId() const = 0;
 };
 
