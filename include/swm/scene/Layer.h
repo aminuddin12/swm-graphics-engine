@@ -11,8 +11,8 @@ public:
     void setVisible(bool visible);
     bool isVisible() const;
 private:
-    float m_opacity{1.0f};
-    bool m_visible{true};
+    float m_opacity = 1.0f;
+    bool m_visible = true;
 };
 
 }

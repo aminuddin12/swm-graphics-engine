@@ -4,7 +4,7 @@
 namespace swm::graphics {
 
 struct Timestamp {
-    uint64_t nanoseconds{0};
+    uint64_t nanoseconds = 0;
 };
 
 }

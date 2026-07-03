@@ -5,7 +5,7 @@
 namespace swm::graphics {
 
 struct FrameTime {
-    uint64_t frameNumber{0};
+    uint64_t frameNumber = 0;
     Timestamp timestamp;
 };
 

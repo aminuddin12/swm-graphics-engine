@@ -20,7 +20,7 @@ private:
     uint32_t m_width;
     uint32_t m_height;
     PixelFormat m_format;
-    uint64_t m_timestamp{0};
+    uint64_t m_timestamp = 0;
     std::vector<uint8_t> m_data;
 };
 
