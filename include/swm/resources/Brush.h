@@ -8,7 +8,7 @@ namespace swm::graphics {
 class Brush : public Resource {
 public:
     Brush(const std::string& id, const Color& color) : m_id(id), m_color(color) {}
-    ~Brush() noexcept override = default;
+    ~Brush() noexcept override {}
     const std::string& getId() const override { return m_id; }
     const Color& getColor() const { return m_color; }
 private:
