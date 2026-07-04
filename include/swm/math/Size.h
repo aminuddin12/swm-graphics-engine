@@ -1,6 +1,6 @@
 #pragma once
 
-namespace swm::graphics {
+namespace swm::math {
 
 struct Size {
     float width = 0.0f;

@@ -1,15 +1,15 @@
-#include "../../include/swm/scene/Node.h"
+#include "swm/scene/Node.h"
 
-namespace swm::graphics {
+namespace swm::scene {
 
 Node::Node() {
 }
 
-void Node::setTransform(const Transform& transform) {
+void Node::setTransform(const swm::math::Transform& transform) {
     m_transform = transform;
 }
 
-const Transform& Node::getTransform() const {
+const swm::math::Transform& Node::getTransform() const {
     return m_transform;
 }
 

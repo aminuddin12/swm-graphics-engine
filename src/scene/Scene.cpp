@@ -1,7 +1,7 @@
-#include "../../include/swm/scene/Scene.h"
+#include "swm/scene/Scene.h"
 #include <algorithm>
 
-namespace swm::graphics {
+namespace swm::scene {
 
 Scene::Scene() {
 }

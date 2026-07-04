@@ -1,6 +1,6 @@
 #pragma once
 
-namespace swm::graphics {
+namespace swm::math {
 
 struct Color {
     float r = 0.0f;

@@ -1,13 +1,12 @@
 #pragma once
 #include <string>
 
-namespace swm::graphics {
+namespace swm::resources {
 
 class Resource {
 public:
-  virtual ~Resource();
-  noexcept = default;
+  virtual ~Resource() noexcept {}
   virtual const std::string &getId() const = 0;
 };
 
-} // namespace swm::graphics
+} // namespace swm::resources

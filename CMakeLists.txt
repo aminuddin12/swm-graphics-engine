@@ -13,9 +13,9 @@ add_library(swm_graphics_engine STATIC
     src/core/GraphicsEngine.cpp
     src/render/Frame.cpp
     src/render/RenderTarget.cpp
-    src/render/CommandBuffer.cpp
-    src/render/RenderTree.cpp
-    src/render/RenderContext.cpp
+    src/render/SceneCompiler.cpp
+    src/render/RenderCompiler.cpp
+    src/render/rasterizers/RectangleRasterizer.cpp
     src/render/RendererFactory.cpp
     src/backends/null/NullRenderer.cpp
     src/scene/Node.cpp
@@ -24,7 +24,6 @@ add_library(swm_graphics_engine STATIC
     src/scene/Scene.cpp
     src/scene/Camera.cpp
     src/scene/Canvas.cpp
-    src/resources/ResourceManager.cpp
 )
 
 target_include_directories(swm_graphics_engine PUBLIC

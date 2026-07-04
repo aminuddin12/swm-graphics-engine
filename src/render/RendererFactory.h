@@ -3,13 +3,13 @@
 #include <memory>
 #include <cstdint>
 
-namespace swm::graphics {
+namespace swm::render { class IRenderer; }
 
-class IRenderer;
+namespace swm::graphics {
 
 class RendererFactory {
 public:
-    static std::shared_ptr<IRenderer> create(EngineBackend backend, uint32_t width, uint32_t height);
+    static std::shared_ptr<swm::render::IRenderer> create(EngineBackend backend, uint32_t width, uint32_t height);
 };
 
 }

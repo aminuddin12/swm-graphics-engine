@@ -1,9 +1,9 @@
 #pragma once
-#include "Resource.h"
 #include <memory>
 #include <string>
 
-namespace swm::graphics {
+namespace swm::resources {
+class Resource;
 
 class ResourceLoader {
 public:

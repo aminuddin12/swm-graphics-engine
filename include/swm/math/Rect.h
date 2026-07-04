@@ -1,6 +1,6 @@
 #pragma once
 
-namespace swm::graphics {
+namespace swm::math {
 
 struct Rect {
     float x = 0.0f;

@@ -8,9 +8,12 @@ class EngineServices {
 public:
     EngineServices();
     ~EngineServices() = default;
-    std::shared_ptr<ResourceManager> getResourceManager() const;
+    
+    swm::resources::ResourceRegistry& getRegistry() { return m_registry; }
+    std::shared_ptr<swm::resources::ResourceManager> getResourceManager() const;
 private:
-    std::shared_ptr<ResourceManager> m_resourceManager;
+    swm::resources::ResourceRegistry m_registry;
+    std::shared_ptr<swm::resources::ResourceManager> m_resourceManager;
 };
 
 }

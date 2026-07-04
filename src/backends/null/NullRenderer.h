@@ -4,19 +4,19 @@
 
 namespace swm::graphics {
 
-class NullRenderer : public IRenderer {
+class NullRenderer : public swm::render::IRenderer {
 public:
     NullRenderer(uint32_t width, uint32_t height);
     ~NullRenderer() override = default;
 
     void initialize() override;
     void shutdown() override;
-    std::shared_ptr<Frame> render(const std::shared_ptr<Canvas>& canvas) override;
-    void executeCommands(const std::shared_ptr<CommandBuffer>& buffer, const std::shared_ptr<RenderTarget>& target) override;
+    
+    void render(const std::vector<swm::render::RenderPass>& passes, swm::render::RenderContext* context) override;
 
 private:
     uint32_t m_width;
     uint32_t m_height;
 };
 
-}
+} // namespace swm::graphics

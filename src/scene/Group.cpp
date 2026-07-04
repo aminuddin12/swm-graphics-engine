@@ -1,7 +1,7 @@
-#include "../../include/swm/scene/Group.h"
+#include "swm/scene/Group.h"
 #include <algorithm>
 
-namespace swm::graphics {
+namespace swm::scene {
 
 Group::Group() {
 }

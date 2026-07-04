@@ -1,6 +1,6 @@
 #pragma once
 
-namespace swm::graphics {
+namespace swm::math {
 
 struct Matrix3 {
     float m[9];

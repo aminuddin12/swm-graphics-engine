@@ -1,7 +1,7 @@
 #pragma once
 #include "Vector3.h"
 
-namespace swm::graphics {
+namespace swm::math {
 
 struct Transform {
     Vector3 translation;

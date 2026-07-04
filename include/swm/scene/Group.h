@@ -3,7 +3,7 @@
 #include <vector>
 #include <memory>
 
-namespace swm::graphics {
+namespace swm::scene {
 
 class Group : public Node {
 public:

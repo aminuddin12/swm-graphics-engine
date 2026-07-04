@@ -1,23 +1,23 @@
-#include "../../include/swm/scene/Canvas.h"
+#include "swm/scene/Canvas.h"
 
-namespace swm::graphics {
+namespace swm::scene {
 
 Canvas::Canvas() {
 }
 
-void Canvas::setSize(const Size& size) {
+void Canvas::setSize(const swm::math::Size& size) {
     m_size = size;
 }
 
-const Size& Canvas::getSize() const {
+const swm::math::Size& Canvas::getSize() const {
     return m_size;
 }
 
-void Canvas::setClearColor(const Color& color) {
+void Canvas::setClearColor(const swm::math::Color& color) {
     m_clearColor = color;
 }
 
-const Color& Canvas::getClearColor() const {
+const swm::math::Color& Canvas::getClearColor() const {
     return m_clearColor;
 }
 

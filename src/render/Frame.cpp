@@ -1,41 +1,21 @@
-#include "../../include/swm/Frame.h"
+#include "swm/Frame.h"
+#include <algorithm>
 
 namespace swm::graphics {
 
 Frame::Frame(uint32_t width, uint32_t height, PixelFormat format)
-    : m_width(width), m_height(height), m_format(format), m_data(width * height * 4, 0) {
+    : m_width(width), m_height(height), m_format(format) {
+    size_t size = height * stride();
+    m_data.resize(size, 0);
 }
 
-uint32_t Frame::getWidth() const {
-    return m_width;
+uint32_t Frame::stride() const {
+    uint32_t bytesPerPixel = 4; // default for RGBA8888 or BGRA8888
+    return m_width * bytesPerPixel;
 }
 
-uint32_t Frame::getHeight() const {
-    return m_height;
-}
-
-uint32_t Frame::getStride() const {
-    return m_width * 4;
-}
-
-PixelFormat Frame::getPixelFormat() const {
-    return m_format;
-}
-
-uint64_t Frame::getTimestamp() const {
-    return m_timestamp;
-}
-
-void Frame::setTimestamp(uint64_t timestamp) {
-    m_timestamp = timestamp;
-}
-
-const uint8_t* Frame::getData() const {
-    return m_data.data();
-}
-
-uint8_t* Frame::getData() {
-    return m_data.data();
+void Frame::clear() {
+    std::fill(m_data.begin(), m_data.end(), 0);
 }
 
 }
